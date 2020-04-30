@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>噪声的统计学导论 | bindyhone&#39;s Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="统计学导论及回顾   噪声的时域表示 噪声的统计学表示 噪声的频域表示 通过频谱密度计算均方根（RMS）噪声 小结 相关计算公式     噪声的时域表示 热噪声 en（RMS噪声电压）   由导体中的电子自由运动产生，运动幅度随着温度上升而上升。   正相关参数：   R 以Ω为单位的电阻  T 以K为单位的温度  Δf 以Hz为单位的噪声带宽 噪声的统计学表示 概率密度函数   描述正态分布。将">
+<meta property="og:type" content="article">
+<meta property="og:title" content="噪声的统计学导论">
+<meta property="og:url" content="http://bindyhone.github.io/2020/04/30/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/index.html">
+<meta property="og:site_name" content="bindyhone&#39;s Blogs">
+<meta property="og:description" content="统计学导论及回顾   噪声的时域表示 噪声的统计学表示 噪声的频域表示 通过频谱密度计算均方根（RMS）噪声 小结 相关计算公式     噪声的时域表示 热噪声 en（RMS噪声电压）   由导体中的电子自由运动产生，运动幅度随着温度上升而上升。   正相关参数：   R 以Ω为单位的电阻  T 以K为单位的温度  Δf 以Hz为单位的噪声带宽 噪声的统计学表示 概率密度函数   描述正态分布。将">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-30T14:05:13.641Z">
+<meta property="article:modified_time" content="2020-04-30T14:15:49.774Z">
+<meta property="article:author" content="bindyhone">
+<meta property="article:tag" content="电子 java 半导体">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="bindyhone&#39;s Blogs" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">bindyhone&#39;s Blogs</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://bindyhone.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-噪声的统计学导论" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/30/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/" class="article-date">
+  <time datetime="2020-04-30T14:05:13.641Z" itemprop="datePublished">2020-04-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      噪声的统计学导论
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="统计学导论及回顾"><a href="#统计学导论及回顾" class="headerlink" title="统计学导论及回顾"></a>统计学导论及回顾</h1><!-- TOC -->
+
+<ul>
+<li><a href="#噪声的时域表示">噪声的时域表示</a></li>
+<li><a href="#噪声的统计学表示">噪声的统计学表示</a></li>
+<li><a href="#噪声的频域表示">噪声的频域表示</a></li>
+<li><a href="#通过频谱密度计算均方根（RMS）噪声">通过频谱密度计算均方根（RMS）噪声</a></li>
+<li><a href="#小结">小结</a></li>
+<li><a href="#相关计算公式">相关计算公式</a></li>
+</ul>
+<!-- /TOC -->
+
+<hr>
+<h2 id="噪声的时域表示"><a href="#噪声的时域表示" class="headerlink" title="噪声的时域表示"></a>噪声的时域表示</h2><ul>
+<li><p>热噪声 en（RMS噪声电压）</p>
+<p>  由导体中的电子自由运动产生，运动幅度随着温度上升而上升。</p>
+<p>  正相关参数：</p>
+</li>
+</ul>
+<pre><code>R 以Ω为单位的电阻
+
+T 以K为单位的温度
+
+Δf 以Hz为单位的噪声带宽</code></pre><hr>
+<h2 id="噪声的统计学表示"><a href="#噪声的统计学表示" class="headerlink" title="噪声的统计学表示"></a>噪声的统计学表示</h2><ul>
+<li><p>概率密度函数</p>
+<p>  描述正态分布。将一段时间间隔内测量到的噪声电压用柱状图绘制出来，其包络与这个函数近似。通过它可以得知每个事件对应的概率。</p>
+</li>
+<li><p>概率分布函数</p>
+<p>  概率分布函数是概率密度函数的积分。通过它可以得知一个事件在已知区间内的发生概率。有助于将噪声的RMS转化为峰峰值。</p>
+</li>
+</ul>
+<hr>
+<h2 id="噪声的频域表示"><a href="#噪声的频域表示" class="headerlink" title="噪声的频域表示"></a>噪声的频域表示</h2><p>由频谱通常可看到运放噪声的两个区域</p>
+<ul>
+<li><p>低频部分的1/f噪声</p>
+</li>
+<li><p>宽带区域的热噪声</p>
+</li>
+</ul>
+<hr>
+<h2 id="通过频谱密度计算均方根（RMS）噪声"><a href="#通过频谱密度计算均方根（RMS）噪声" class="headerlink" title="通过频谱密度计算均方根（RMS）噪声"></a>通过频谱密度计算均方根（RMS）噪声</h2><ul>
+<li><p>噪声功率频谱RMS=频谱密度积分</p>
+</li>
+<li><p>噪声电压（电流）频谱RMS=先转换为功率（V²、I²）再进行密度积分</p>
+</li>
+</ul>
+<hr>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>示波器测量是噪声的时域表示。</li>
+<li>x轴是时间，y轴是电压或者电流。</li>
+<li>高斯分布是噪声的统计学表示。</li>
+<li>如果噪声中不含DC成分（平均值为零），那么标准差等于RMS值。</li>
+<li>6倍的标准差是峰峰值噪声的一个较好的近似。</li>
+<li>噪声小于6倍标准差的概率是99.7%。</li>
+<li>大部分噪声是不相关的。</li>
+<li>不相关噪声之间的叠加是用每个噪声的平方和再开方来实现的。</li>
+<li>噪声频谱密度是噪声的频域表示。</li>
+<li>频谱密度的单位是V/HZ^1/2或A/HZ^1/2。</li>
+<li>白噪声是由无限多相同能量不同频率的分量组成。</li>
+<li>噪声频谱密度曲线的两个关键区域是1/f区域和宽带区域。</li>
+<li>可以通过将噪声信号平方后积分，然后再开平方根的方式将噪声频谱密度转化为RMS噪声</li>
+</ul>
+<hr>
+<h2 id="相关计算公式"><a href="#相关计算公式" class="headerlink" title="相关计算公式"></a>相关计算公式</h2><ul>
+<li>热噪声公式（RMS）en = (4<em>k</em>T<em>R</em>Δf)^1/2</li>
+<li>频谱密度 en/(Δf^1/2) = (4<em>k</em>T*R)^1/2</li>
+<li>相关噪声叠加：enT = （en1²+en2²+2<em>C</em>en1*en2）^1/2</li>
+<li>不相关噪声叠加：enT = （en1²+en2²）^1/2</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://bindyhone.github.io/2020/04/30/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/" data-id="ck9muprgh0003nwv5ebi1bt2h" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/30/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">电源测试大纲</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/30/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/">噪声的统计学导论</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/30/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/">电源测试大纲</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/30/java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/">java学习之路</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 bindyhone<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
