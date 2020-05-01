@@ -93,81 +93,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="统计学导论及回顾"><a href="#统计学导论及回顾" class="headerlink" title="统计学导论及回顾"></a>统计学导论及回顾</h1><!-- TOC -->
+        统计学导论及回顾
+ * 噪声的时域表示
+ * 噪声的统计学表示
+ * 噪声的频域表示
+ * 通过频谱密度计算均方根（RMS）噪声
+ * 小结
+ * 相关计算公式
 
-<ul>
-<li><a href="#噪声的时域表示">噪声的时域表示</a></li>
-<li><a href="#噪声的统计学表示">噪声的统计学表示</a></li>
-<li><a href="#噪声的频域表示">噪声的频域表示</a></li>
-<li><a href="#通过频谱密度计算均方根（RMS）噪声">通过频谱密度计算均方根（RMS）噪声</a></li>
-<li><a href="#小结">小结</a></li>
-<li><a href="#相关计算公式">相关计算公式</a></li>
-</ul>
-<!-- /TOC -->
 
-<hr>
-<h2 id="噪声的时域表示"><a href="#噪声的时域表示" class="headerlink" title="噪声的时域表示"></a>噪声的时域表示</h2><ul>
-<li><p>热噪声 en（RMS噪声电压）</p>
-<p>  由导体中的电子自由运动产生，运动幅度随着温度上升而上升。</p>
-<p>  正相关参数：</p>
-</li>
-</ul>
-<pre><code>R 以Ω为单位的电阻
+
+
+噪声的时域表示
+ * 热噪声 en（RMS噪声电压）
+   
+    由导体中的电子自由运动产生，运动幅度随着温度上升而上升。
+   
+    正相关参数：
+   
+   
+
+R 以Ω为单位的电阻
 
 T 以K为单位的温度
 
-Δf 以Hz为单位的噪声带宽</code></pre><hr>
-<h2 id="噪声的统计学表示"><a href="#噪声的统计学表示" class="headerlink" title="噪声的统计学表示"></a>噪声的统计学表示</h2><ul>
-<li><p>概率密度函数</p>
-<p>  描述正态分布。将一段时间间隔内测量到的噪声电压用柱状图绘制出来，其包络与这个函数近似。通过它可以得知每个事件对应的概率。</p>
-</li>
-<li><p>概率分布函数</p>
-<p>  概率分布函数是概率密度函数的积分。通过它可以得知一个事件在已知区间内的发生概率。有助于将噪声的RMS转化为峰峰值。</p>
-</li>
-</ul>
-<hr>
-<h2 id="噪声的频域表示"><a href="#噪声的频域表示" class="headerlink" title="噪声的频域表示"></a>噪声的频域表示</h2><p>由频谱通常可看到运放噪声的两个区域</p>
-<ul>
-<li><p>低频部分的1/f噪声</p>
-</li>
-<li><p>宽带区域的热噪声</p>
-</li>
-</ul>
-<hr>
-<h2 id="通过频谱密度计算均方根（RMS）噪声"><a href="#通过频谱密度计算均方根（RMS）噪声" class="headerlink" title="通过频谱密度计算均方根（RMS）噪声"></a>通过频谱密度计算均方根（RMS）噪声</h2><ul>
-<li><p>噪声功率频谱RMS=频谱密度积分</p>
-</li>
-<li><p>噪声电压（电流）频谱RMS=先转换为功率（V²、I²）再进行密度积分</p>
-</li>
-</ul>
-<hr>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
-<li>示波器测量是噪声的时域表示。</li>
-<li>x轴是时间，y轴是电压或者电流。</li>
-<li>高斯分布是噪声的统计学表示。</li>
-<li>如果噪声中不含DC成分（平均值为零），那么标准差等于RMS值。</li>
-<li>6倍的标准差是峰峰值噪声的一个较好的近似。</li>
-<li>噪声小于6倍标准差的概率是99.7%。</li>
-<li>大部分噪声是不相关的。</li>
-<li>不相关噪声之间的叠加是用每个噪声的平方和再开方来实现的。</li>
-<li>噪声频谱密度是噪声的频域表示。</li>
-<li>频谱密度的单位是V/HZ^1/2或A/HZ^1/2。</li>
-<li>白噪声是由无限多相同能量不同频率的分量组成。</li>
-<li>噪声频谱密度曲线的两个关键区域是1/f区域和宽带区域。</li>
-<li>可以通过将噪声信号平方后积分，然后再开平方根的方式将噪声频谱密度转化为RMS噪声</li>
-</ul>
-<hr>
-<h2 id="相关计算公式"><a href="#相关计算公式" class="headerlink" title="相关计算公式"></a>相关计算公式</h2><ul>
-<li>热噪声公式（RMS）en = (4<em>k</em>T<em>R</em>Δf)^1/2</li>
-<li>频谱密度 en/(Δf^1/2) = (4<em>k</em>T*R)^1/2</li>
-<li>相关噪声叠加：enT = （en1²+en2²+2<em>C</em>en1*en2）^1/2</li>
-<li>不相关噪声叠加：enT = （en1²+en2²）^1/2</li>
-</ul>
+Δf 以Hz为单位的噪声带宽
 
+
+
+
+噪声的统计学表示
+ * 概率密度函数
+   
+    描述正态分布。将一段时间间隔内测量到的噪声电压用柱状图绘制出来，其包络与这个函数近似。通过它可以得知每个事件对应的
+        
+          <p class="article-more-link">
+            <a href="/2020/04/30/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/04/30/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/" data-id="ck9mvc9q50001o4v5fmu9bdd9" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/04/30/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/" data-id="ck9o7xdf50000rsv58ysbbauh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%99%AA%E5%A3%B0/" rel="tag">噪声</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%90%E6%94%BE/" rel="tag">运放</a></li></ul>
@@ -205,45 +172,43 @@ T 以K为单位的温度
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="电源测试大纲"><a href="#电源测试大纲" class="headerlink" title="电源测试大纲"></a>电源测试大纲</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><!-- TOC -->
+        电源测试大纲
+目录
+ * DC电源指标
+ * AC电源指标
 
-<ul>
-<li><a href="#DC电源指标">DC电源指标</a></li>
-<li><a href="#AC电源指标">AC电源指标</a></li>
-</ul>
-<!-- /TOC -->
 
-<hr>
-<h2 id="DC电源指标"><a href="#DC电源指标" class="headerlink" title="DC电源指标"></a>DC电源指标</h2><ul>
-<li><p>电压调整率</p>
-<p>  S = |Uo1 - Uo|/Uo</p>
-<p>  调节输入电压，测试输出电压差值与额定输出电压的比例。Uo1为调节输入后的输出电压，Uo为额定输出电压。</p>
-</li>
-<li><p>负载调整率</p>
-<p>  S = |Uo1 - Uo|/Uo</p>
-<p>  保持输入电压不变，调节输出负载，测量输出电压的最大小队变化量</p>
-</li>
-<li><p>纹波系数</p>
-<p>  γ = Urms / Uo</p>
-<p>  额定输出电压和负载电流，输出电压（电流）纹波（包括噪声）峰峰值大小，通常用Vpp或有效值Vrms纹波系数。Uo 为额定输出电压。</p>
-</li>
-</ul>
-<hr>
-<h2 id="AC电源指标"><a href="#AC电源指标" class="headerlink" title="AC电源指标"></a>AC电源指标</h2><ul>
-<li><p>负载调整率</p>
-<p>  S = Urms / Uo</p>
-<p>  保持输入电压不变，给输出电压增加交流负载，测试输出电压纹波与额定电压的比值。Urms为输出电压纹波，Uo 为额定输出电压。主要衡量电源的瞬态响应</p>
-</li>
-<li><p>PSRR（电源抑制比）</p>
-<p>  S = 20log(Vripple_in/Vripple_out)</p>
-<p>  需要使用AC+DC网络求和器件。在电源输入端加入AC噪声，测量输入纹波与输出纹波的比值</p>
-</li>
-</ul>
 
+
+DC电源指标
+ * 电压调整率
+   
+    S = |Uo1 - Uo|/Uo
+   
+    调节输入电压，测试输出电压差值与额定输出电压的比例。Uo1为调节输入后的输出电压，Uo为额定输出电压。
+   
+   
+ * 负载调整率
+   
+    S = |Uo1 - Uo|/Uo
+   
+    保持输入电压不变，调节输出负载，测量输出电压的最大小队变化量
+   
+   
+ * 纹波系数
+   
+    γ = Urms / Uo
+   
+    额定输出电压和负载电流，输出电压（电流）纹波（包括噪声）峰峰值大小，通常
+        
+          <p class="article-more-link">
+            <a href="/2020/04/30/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/04/30/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/" data-id="ck9mvc9q70002o4v515jv29oh" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/04/30/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/" data-id="ck9o7xdfb0001rsv57wiu2u9a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E6%BA%90/" rel="tag">电源</a></li></ul>
@@ -277,24 +242,32 @@ T 以K为单位的温度
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+Quick Start
+Create a new post
+1
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+$ hexo new "My New Post"
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
+More info: Writing
+
+Run server
+1
+
+
+$ hexo s
+        
+          <p class="article-more-link">
+            <a href="/2020/04/30/hello-world/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/04/30/hello-world/" data-id="ck9mvc9py0000o4v5b79t0vko" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/04/30/hello-world/" data-id="ck9o7xdff0004rsv550eha138" class="article-share-link">Share</a>
       
       
     </footer>
@@ -326,56 +299,43 @@ T 以K为单位的温度
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="入坑Java开发的自学之路"><a href="#入坑Java开发的自学之路" class="headerlink" title="入坑Java开发的自学之路"></a>入坑Java开发的自学之路</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ul>
-<li>编程语言：Java Python C</li>
-<li>基本算法 </li>
-<li>基本网络知识：TCP/IP HTTP/HTTPS</li>
-<li>基本的设计模式</li>
-</ul>
-<hr>
-<h2 id="工具方面"><a href="#工具方面" class="headerlink" title="工具方面"></a>工具方面</h2><ul>
-<li>操作系统</li>
-<li>代码管理：SVN/GIT</li>
-<li>持续集成（CI/CD）：jenkins</li>
-<li>Java的项目管理工具：Maven / Gradle</li>
-</ul>
-<hr>
-<h2 id="框架方面"><a href="#框架方面" class="headerlink" title="框架方面"></a>框架方面</h2><h4 id="应用层框架"><a href="#应用层框架" class="headerlink" title="应用层框架"></a>应用层框架</h4><ul>
-<li><del>ssh spring + structs + hibernate</del></li>
-<li>ssm spring spring mvc mybatis</li>
-<li>spring boot</li>
-</ul>
-<h4 id="各种中间件"><a href="#各种中间件" class="headerlink" title="各种中间件"></a>各种中间件</h4><ul>
-<li>MQ消息队列</li>
-<li>RPC通信框架</li>
-<li>elastisearch 数据库 搜索引擎</li>
-</ul>
-<h4 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h4><ul>
-<li>SQL：MYSQL Postgre SQL</li>
-<li>NoSQL：Redis Memcached mongodb elasticsearch</li>
-</ul>
-<hr>
-<h2 id="架构方面"><a href="#架构方面" class="headerlink" title="架构方面"></a>架构方面</h2><h4 id="分布式-微服务架构"><a href="#分布式-微服务架构" class="headerlink" title="分布式/微服务架构"></a>分布式/微服务架构</h4><ul>
-<li>spring cloud</li>
-<li>dubbo</li>
-<li>RPC通信</li>
-</ul>
-<h3 id="虚拟化-容器化的技术"><a href="#虚拟化-容器化的技术" class="headerlink" title="虚拟化/容器化的技术"></a>虚拟化/容器化的技术</h3><ul>
-<li>Docker 容器化</li>
-<li>k8s</li>
-</ul>
-<hr>
-<h2 id="关注源码-性能"><a href="#关注源码-性能" class="headerlink" title="关注源码/性能"></a>关注源码/性能</h2><ul>
-<li>JDK源码及部分设计思想</li>
-<li>Spring 源码</li>
-<li>JVM 细节与排错</li>
-<li>高并发/高可用</li>
-</ul>
+        入坑Java开发的自学之路
+基础知识
+ * 编程语言：Java Python C
+ * 基本算法 
+ * 基本网络知识：TCP/IP HTTP/HTTPS
+ * 基本的设计模式
 
+
+
+
+工具方面
+ * 操作系统
+ * 代码管理：SVN/GIT
+ * 持续集成（CI/CD）：jenkins
+ * Java的项目管理工具：Maven / Gradle
+
+
+
+
+框架方面
+应用层框架
+ * ssh spring + structs + hibernate
+ * ssm spring spring mvc mybatis
+ * spring boot
+
+各种中间件
+ * MQ消息队列
+ * RPC通信框
+        
+          <p class="article-more-link">
+            <a href="/2020/04/30/java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/04/30/java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" data-id="ck9mvc9qb0005o4v5fmn093qj" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/04/30/java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" data-id="ck9o7xdfv000frsv57jcy4tp2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
