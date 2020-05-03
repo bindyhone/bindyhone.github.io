@@ -14,16 +14,16 @@
 <meta property="og:site_name" content="bindyhone&#39;s Blogs">
 <meta property="og:description" content="缓冲（跟随）电路  * 设计目标  * 设计概述  * 设计笔记  * 设计步骤  * 设计仿真 * DC设计指标     * AC设计指标             设计目标      设计概述  * 此设计用于呈现高输入阻抗和低输出阻抗来缓冲信号。          * 此电路通常用于驱动低阻抗负载、ADC和缓冲器          * 此电路的输出电压等于输入电压">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%B7%9F%E9%9A%8F%E5%99%A8%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.PNG">
-<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%B7%9F%E9%9A%8F%E5%99%A8%E7%94%B5%E8%B7%AF.PNG">
-<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BEDC%E4%BB%BF%E7%9C%9F.PNG">
-<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BEAC%E4%BB%BF%E7%9C%9F.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%B7%9F%E9%9A%8F%E5%99%A8%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%B7%9F%E9%9A%8F%E5%99%A8%E7%94%B5%E8%B7%AF.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BEDC%E4%BB%BF%E7%9C%9F.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BEAC%E4%BB%BF%E7%9C%9F.PNG">
 <meta property="article:published_time" content="2020-05-03T09:09:49.217Z">
 <meta property="article:modified_time" content="2020-05-03T09:50:03.352Z">
 <meta property="article:author" content="bindyhone">
 <meta property="article:tag" content="运放">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%B7%9F%E9%9A%8F%E5%99%A8%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.PNG">
+<meta name="twitter:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%B7%9F%E9%9A%8F%E5%99%A8%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.PNG">
   
     <link rel="alternate" href="/atom.xml" title="bindyhone&#39;s Blogs" type="application/atom+xml">
   
@@ -114,7 +114,7 @@
 <!-- /TOC -->
 
 <hr>
-<h2 id="设计目标"><a href="#设计目标" class="headerlink" title="设计目标"></a>设计目标</h2><p><img src="/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%B7%9F%E9%9A%8F%E5%99%A8%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.PNG" alt="跟随器设计目标"></p>
+<h2 id="设计目标"><a href="#设计目标" class="headerlink" title="设计目标"></a>设计目标</h2><p><img src="%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%B7%9F%E9%9A%8F%E5%99%A8%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.PNG" alt="跟随器设计目标"></p>
 <hr>
 <h2 id="设计概述"><a href="#设计概述" class="headerlink" title="设计概述"></a>设计概述</h2><ul>
 <li><p>此设计用于呈现高输入阻抗和低输出阻抗来缓冲信号。</p>
@@ -124,7 +124,7 @@
 <li><p>此电路的输出电压等于输入电压</p>
 </li>
 </ul>
-<p><img src="/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%B7%9F%E9%9A%8F%E5%99%A8%E7%94%B5%E8%B7%AF.PNG" alt="跟随器电路"></p>
+<p><img src="%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%B7%9F%E9%9A%8F%E5%99%A8%E7%94%B5%E8%B7%AF.PNG" alt="跟随器电路"></p>
 <hr>
 <h2 id="设计笔记"><a href="#设计笔记" class="headerlink" title="设计笔记"></a>设计笔记</h2><ol>
 <li><p>工作在运放的线性输出工作范围</p>
@@ -155,13 +155,13 @@
 </li>
 </ol>
 <hr>
-<h2 id="设计仿真"><a href="#设计仿真" class="headerlink" title="设计仿真"></a>设计仿真</h2><h3 id="DC仿真结果"><a href="#DC仿真结果" class="headerlink" title="DC仿真结果"></a>DC仿真结果</h3><p><img src="/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BEDC%E4%BB%BF%E7%9C%9F.PNG" alt="运放DC仿真"></p>
-<h3 id="AC仿真结果"><a href="#AC仿真结果" class="headerlink" title="AC仿真结果"></a>AC仿真结果</h3><p><img src="/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BEAC%E4%BB%BF%E7%9C%9F.PNG" alt="运放AC仿真"></p>
+<h2 id="设计仿真"><a href="#设计仿真" class="headerlink" title="设计仿真"></a>设计仿真</h2><h3 id="DC仿真结果"><a href="#DC仿真结果" class="headerlink" title="DC仿真结果"></a>DC仿真结果</h3><p><img src="%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BEDC%E4%BB%BF%E7%9C%9F.PNG" alt="运放DC仿真"></p>
+<h3 id="AC仿真结果"><a href="#AC仿真结果" class="headerlink" title="AC仿真结果"></a>AC仿真结果</h3><p><img src="%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BEAC%E4%BB%BF%E7%9C%9F.PNG" alt="运放AC仿真"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/" data-id="ck9r09j1d000a2ov5g7sy3k5z" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/" data-id="ck9r0h2u40007sgv53fjma6il" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%90%E6%94%BE/" rel="tag">运放</a></li></ul>
