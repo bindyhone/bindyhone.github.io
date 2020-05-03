@@ -129,7 +129,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/05/03/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0%E7%AE%80%E4%BB%8B/" data-id="ck9qu4zrw000b4ov54varg2s7" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/05/03/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0%E7%AE%80%E4%BB%8B/" data-id="ck9qu8oly000aksv5dvhv5ees" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%90%E6%94%BE/" rel="tag">运放</a></li></ul>
@@ -141,9 +141,9 @@
 
 
   
-    <article id="post-电源测试大纲" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-噪声的统计学导论" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/05/03/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/" class="article-date">
+    <a href="/2020/05/03/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/" class="article-date">
   <time datetime="2020-05-03T09:09:49.217Z" itemprop="datePublished">2020-05-03</time>
 </a>
     
@@ -159,7 +159,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/">电源测试大纲</a>
+      <a class="article-title" href="/2020/05/03/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/">噪声的统计学导论</a>
     </h1>
   
 
@@ -167,46 +167,53 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        电源测试大纲
-目录
- * DC电源指标
- * AC电源指标
+        统计学导论及回顾
+ * 噪声的时域表示
+ * 噪声的统计学表示
+ * 噪声的频域表示
+ * 通过频谱密度计算均方根（RMS）噪声
+ * 小结
+ * 相关计算公式
 
 
 
 
-DC电源指标
- * 电压调整率
+噪声的时域表示
+ * 热噪声 en（RMS噪声电压）
    
-    S = |Uo1 - Uo|/Uo
+    由导体中的电子自由运动产生，运动幅度随着温度上升而上升。
    
-    调节输入电压，测试输出电压差值与额定输出电压的比例。Uo1为调节输入后的输出电压，Uo为额定输出电压。
-   
-   
- * 负载调整率
-   
-    S = |Uo1 - Uo|/Uo
-   
-    保持输入电压不变，调节输出负载，测量输出电压的最大小队变化量
+    正相关参数：
    
    
- * 纹波系数
+
+R 以Ω为单位的电阻
+
+T 以K为单位的温度
+
+Δf 以Hz为单位的噪声带宽
+
+
+
+
+
+
+噪声的统计学表示
+ * 概率密度函数
    
-    γ = Urms / Uo
-   
-    额定输出电压和负载电流，输出电压（电流）纹波（包括噪声）峰峰值大小，通常
+    描述正态分布。将一段时间间隔内测量到的噪声电压用柱状图绘制出来，其包络与这个函数近似。通过它可以得知每个事件对
         
           <p class="article-more-link">
-            <a href="/2020/05/03/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/#more">Read More</a>
+            <a href="/2020/05/03/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/05/03/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/" data-id="ck9qu4zrp00054ov5gsj25o9p" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/05/03/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/" data-id="ck9qu8olr0004ksv5eufn1ugg" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E6%BA%90/" rel="tag">电源</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%99%AA%E5%A3%B0/" rel="tag">噪声</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%90%E6%94%BE/" rel="tag">运放</a></li></ul>
 
     </footer>
   </div>
@@ -293,7 +300,7 @@ DC电源指标
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/" data-id="ck9qu4zrq00064ov51pa22mcw" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/" data-id="ck9qu8olu0006ksv54jw0duql" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%90%E6%94%BE/" rel="tag">运放</a></li></ul>
@@ -305,9 +312,9 @@ DC电源指标
 
 
   
-    <article id="post-噪声的统计学导论" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-电源测试大纲" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/05/03/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/" class="article-date">
+    <a href="/2020/05/03/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/" class="article-date">
   <time datetime="2020-05-03T09:09:49.217Z" itemprop="datePublished">2020-05-03</time>
 </a>
     
@@ -323,7 +330,7 @@ DC电源指标
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/">噪声的统计学导论</a>
+      <a class="article-title" href="/2020/05/03/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/">电源测试大纲</a>
     </h1>
   
 
@@ -331,53 +338,46 @@ DC电源指标
     
     <div class="article-entry" itemprop="articleBody">
       
-        统计学导论及回顾
- * 噪声的时域表示
- * 噪声的统计学表示
- * 噪声的频域表示
- * 通过频谱密度计算均方根（RMS）噪声
- * 小结
- * 相关计算公式
+        电源测试大纲
+目录
+ * DC电源指标
+ * AC电源指标
 
 
 
 
-噪声的时域表示
- * 热噪声 en（RMS噪声电压）
+DC电源指标
+ * 电压调整率
    
-    由导体中的电子自由运动产生，运动幅度随着温度上升而上升。
+    S = |Uo1 - Uo|/Uo
    
-    正相关参数：
+    调节输入电压，测试输出电压差值与额定输出电压的比例。Uo1为调节输入后的输出电压，Uo为额定输出电压。
    
    
-
-R 以Ω为单位的电阻
-
-T 以K为单位的温度
-
-Δf 以Hz为单位的噪声带宽
-
-
-
-
-
-
-噪声的统计学表示
- * 概率密度函数
+ * 负载调整率
    
-    描述正态分布。将一段时间间隔内测量到的噪声电压用柱状图绘制出来，其包络与这个函数近似。通过它可以得知每个事件对
+    S = |Uo1 - Uo|/Uo
+   
+    保持输入电压不变，调节输出负载，测量输出电压的最大小队变化量
+   
+   
+ * 纹波系数
+   
+    γ = Urms / Uo
+   
+    额定输出电压和负载电流，输出电压（电流）纹波（包括噪声）峰峰值大小，通常
         
           <p class="article-more-link">
-            <a href="/2020/05/03/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/#more">Read More</a>
+            <a href="/2020/05/03/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/05/03/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/" data-id="ck9qu4zrs00074ov54f90c097" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/05/03/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/" data-id="ck9qu8olw0007ksv5hp3uett8" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%99%AA%E5%A3%B0/" rel="tag">噪声</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%90%E6%94%BE/" rel="tag">运放</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E6%BA%90/" rel="tag">电源</a></li></ul>
 
     </footer>
   </div>
@@ -433,7 +433,7 @@ $ hexo s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/05/03/hello-world/" data-id="ck9qu4zre00004ov50kk16vp0" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/05/03/hello-world/" data-id="ck9qu8olg0000ksv59imihz26" class="article-share-link">Share</a>
       
       
     </footer>
@@ -493,7 +493,7 @@ $ hexo s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/05/03/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/" data-id="ck9qu4zrk00014ov5hv4g3ypb" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/05/03/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/" data-id="ck9qu8olo0002ksv54mlqfo0i" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
@@ -563,7 +563,7 @@ $ hexo s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/04/30/java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" data-id="ck9qu4zrm00024ov538q91lk1" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/04/30/java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" data-id="ck9qu8oll0001ksv5bh919jw3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
@@ -631,7 +631,7 @@ $ hexo s
           </li>
         
           <li>
-            <a href="/2020/05/03/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/">电源测试大纲</a>
+            <a href="/2020/05/03/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/">噪声的统计学导论</a>
           </li>
         
           <li>
@@ -639,7 +639,7 @@ $ hexo s
           </li>
         
           <li>
-            <a href="/2020/05/03/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/">噪声的统计学导论</a>
+            <a href="/2020/05/03/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/">电源测试大纲</a>
           </li>
         
           <li>
