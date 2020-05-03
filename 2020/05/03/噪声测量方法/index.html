@@ -10,19 +10,19 @@
   <meta name="description" content="示波器噪声测量： 将示波器连接到输出端，可观测到噪声的峰峰值        1. 大部分示波器探针都是10倍放大， 这意味着在这个探针上有一个“10 倍衰减”的衰减器，它会使 noise floor （噪底） 衰减 10 倍。 所以，在测量中不要采用这种类型的探针，而是采 用无     衰减器的探针将信号直接接连至示波器，可以得到 10 倍更优的噪底。            2. 在噪声测量之前检">
 <meta property="og:type" content="article">
 <meta property="og:title" content="噪声测量方法">
-<meta property="og:url" content="http://bindyhone.github.io/2020/05/01/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:url" content="http://bindyhone.github.io/2020/05/03/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="bindyhone&#39;s Blogs">
 <meta property="og:description" content="示波器噪声测量： 将示波器连接到输出端，可观测到噪声的峰峰值        1. 大部分示波器探针都是10倍放大， 这意味着在这个探针上有一个“10 倍衰减”的衰减器，它会使 noise floor （噪底） 衰减 10 倍。 所以，在测量中不要采用这种类型的探针，而是采 用无     衰减器的探针将信号直接接连至示波器，可以得到 10 倍更优的噪底。            2. 在噪声测量之前检">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://bindyhone.github.io/2020/05/01/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0/%E7%A4%BA%E6%B3%A2%E5%99%A8%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F.PNG">
-<meta property="og:image" content="http://bindyhone.github.io/2020/05/01/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0/%E7%A4%BA%E6%B3%A2%E5%99%A8%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE.PNG">
-<meta property="og:image" content="http://bindyhone.github.io/2020/05/01/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0/%E5%99%AA%E5%A3%B0%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF.PNG">
-<meta property="article:published_time" content="2020-05-01T14:03:13.881Z">
-<meta property="article:modified_time" content="2020-05-03T08:29:31.896Z">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0/%E7%A4%BA%E6%B3%A2%E5%99%A8%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0/%E7%A4%BA%E6%B3%A2%E5%99%A8%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0/%E5%99%AA%E5%A3%B0%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF.PNG">
+<meta property="article:published_time" content="2020-05-03T09:09:49.216Z">
+<meta property="article:modified_time" content="2020-05-03T09:09:49.217Z">
 <meta property="article:author" content="bindyhone">
 <meta property="article:tag" content="测试">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://bindyhone.github.io/2020/05/01/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0/%E7%A4%BA%E6%B3%A2%E5%99%A8%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F.PNG">
+<meta name="twitter:image" content="http://bindyhone.github.io/2020/05/03/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0/%E7%A4%BA%E6%B3%A2%E5%99%A8%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F.PNG">
   
     <link rel="alternate" href="/atom.xml" title="bindyhone&#39;s Blogs" type="application/atom+xml">
   
@@ -73,8 +73,8 @@
       <div class="outer">
         <section id="main"><article id="post-噪声测量方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/05/01/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/" class="article-date">
-  <time datetime="2020-05-01T14:03:13.881Z" itemprop="datePublished">2020-05-01</time>
+    <a href="/2020/05/03/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2020-05-03T09:09:49.216Z" itemprop="datePublished">2020-05-03</time>
 </a>
     
   <div class="article-category">
@@ -119,7 +119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/05/01/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/" data-id="ck9qtp0m000064cv550qj3oga" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/05/03/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/" data-id="ck9qu4zrk00014ov5hv4g3ypb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
@@ -130,19 +130,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/05/01/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0%E7%AE%80%E4%BB%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/05/03/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          运放噪声简介
+          Hello World
         
       </div>
     </a>
   
   
-    <a href="/2020/04/30/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/04/30/java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">噪声的统计学导论</div>
+      <div class="article-nav-title">java学习之路</div>
     </a>
   
 </nav>
@@ -200,23 +200,23 @@
       <ul>
         
           <li>
+            <a href="/2020/05/03/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0%E7%AE%80%E4%BB%8B/">运放噪声简介</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/03/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/">电源测试大纲</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/">缓冲（跟随）电路</a>
           </li>
         
           <li>
-            <a href="/2020/05/01/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0%E7%AE%80%E4%BB%8B/">运放噪声简介</a>
+            <a href="/2020/05/03/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/">噪声的统计学导论</a>
           </li>
         
           <li>
-            <a href="/2020/05/01/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/">噪声测量方法</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/30/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/">噪声的统计学导论</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/30/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/">电源测试大纲</a>
+            <a href="/2020/05/03/hello-world/">Hello World</a>
           </li>
         
       </ul>
