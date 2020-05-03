@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>缓冲（跟随）电路 | bindyhone&#39;s Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="缓冲（跟随）电路  * 设计目标  * 设计概述  * 设计笔记  * 设计步骤  * 设计仿真 * DC设计指标     * AC设计指标             设计目标      设计概述  * 此设计用于呈现高输入阻抗和低输出阻抗来缓冲信号。          * 此电路通常用于驱动低阻抗负载、ADC和缓冲器          * 此电路的输出电压等于输入电压">
+<meta property="og:type" content="article">
+<meta property="og:title" content="缓冲（跟随）电路">
+<meta property="og:url" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/index.html">
+<meta property="og:site_name" content="bindyhone&#39;s Blogs">
+<meta property="og:description" content="缓冲（跟随）电路  * 设计目标  * 设计概述  * 设计笔记  * 设计步骤  * 设计仿真 * DC设计指标     * AC设计指标             设计目标      设计概述  * 此设计用于呈现高输入阻抗和低输出阻抗来缓冲信号。          * 此电路通常用于驱动低阻抗负载、ADC和缓冲器          * 此电路的输出电压等于输入电压">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BE%E8%AE%BE%E8%AE%A1/%E8%B7%9F%E9%9A%8F%E5%99%A8%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BE%E8%AE%BE%E8%AE%A1/%E8%B7%9F%E9%9A%8F%E5%99%A8%E7%94%B5%E8%B7%AF.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BE%E8%AE%BE%E8%AE%A1/%E8%BF%90%E6%94%BEDC%E4%BB%BF%E7%9C%9F.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BE%E8%AE%BE%E8%AE%A1/%E8%BF%90%E6%94%BEAC%E4%BB%BF%E7%9C%9F.PNG">
+<meta property="article:published_time" content="2020-05-03T06:32:04.140Z">
+<meta property="article:modified_time" content="2020-05-03T08:24:56.668Z">
+<meta property="article:author" content="bindyhone">
+<meta property="article:tag" content="电子 java 半导体">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/%E8%BF%90%E6%94%BE%E8%AE%BE%E8%AE%A1/%E8%B7%9F%E9%9A%8F%E5%99%A8%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.PNG">
+  
+    <link rel="alternate" href="/atom.xml" title="bindyhone&#39;s Blogs" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">bindyhone&#39;s Blogs</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://bindyhone.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-缓冲（跟随）电路" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/" class="article-date">
+  <time datetime="2020-05-03T06:32:04.140Z" itemprop="datePublished">2020-05-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      缓冲（跟随）电路
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="缓冲（跟随）电路"><a href="#缓冲（跟随）电路" class="headerlink" title="缓冲（跟随）电路"></a>缓冲（跟随）电路</h1><!-- TOC -->
+
+<ul>
+<li><a href="#设计目标">设计目标</a></li>
+<li><a href="#设计概述">设计概述</a></li>
+<li><a href="#设计笔记">设计笔记</a></li>
+<li><a href="#设计步骤">设计步骤</a></li>
+<li><a href="#设计仿真">设计仿真</a><ul>
+<li><a href="#DC设计指标">DC设计指标</a></li>
+<li><a href="#AC设计指标">AC设计指标</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<hr>
+<h2 id="设计目标"><a href="#设计目标" class="headerlink" title="设计目标"></a>设计目标</h2><p><img src="%E8%BF%90%E6%94%BE%E8%AE%BE%E8%AE%A1/%E8%B7%9F%E9%9A%8F%E5%99%A8%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.PNG" alt="跟随器设计目标"></p>
+<hr>
+<h2 id="设计概述"><a href="#设计概述" class="headerlink" title="设计概述"></a>设计概述</h2><ul>
+<li><p>此设计用于呈现高输入阻抗和低输出阻抗来缓冲信号。</p>
+</li>
+<li><p>此电路通常用于驱动低阻抗负载、ADC和缓冲器</p>
+</li>
+<li><p>此电路的输出电压等于输入电压</p>
+</li>
+</ul>
+<p><img src="%E8%BF%90%E6%94%BE%E8%AE%BE%E8%AE%A1/%E8%B7%9F%E9%9A%8F%E5%99%A8%E7%94%B5%E8%B7%AF.PNG" alt="跟随器电路"></p>
+<hr>
+<h2 id="设计笔记"><a href="#设计笔记" class="headerlink" title="设计笔记"></a>设计笔记</h2><ol>
+<li><p>工作在运放的线性输出工作范围</p>
+</li>
+<li><p>小信号带宽由增益带宽积决定</p>
+</li>
+<li><p>检查DATASHEET中最大输出电压范围和频率特性，减小失真</p>
+</li>
+<li><p>共模电压等于输入信号</p>
+</li>
+<li><p>请勿将大于建议值的电容放于输出</p>
+</li>
+<li><p>如果要驱动低阻抗负载，可能需要高输出电流放大器</p>
+</li>
+</ol>
+<hr>
+<h2 id="设计步骤"><a href="#设计步骤" class="headerlink" title="设计步骤"></a>设计步骤</h2><p>Vo = Vi</p>
+<ol>
+<li><p>使用提供的电源查看放大器的输出是否大于设计所需的设计范围</p>
+</li>
+<li><p>查看产品数据表的输出电压和输出电流曲线，验证是否可实现所需输出电流的输出电压</p>
+</li>
+<li><p>使用电源电压验证放大器的输入共模电压会不会超出范围。</p>
+</li>
+<li><p>计算所需的最小压摆率（SR），查看运放是否大于该压摆率（弱运放压摆率太低则会引起失真）</p>
+</li>
+<li><p>验证运放是否有足够的带宽。</p>
+</li>
+</ol>
+<hr>
+<h2 id="设计仿真"><a href="#设计仿真" class="headerlink" title="设计仿真"></a>设计仿真</h2><h3 id="DC仿真结果"><a href="#DC仿真结果" class="headerlink" title="DC仿真结果"></a>DC仿真结果</h3><p><img src="%E8%BF%90%E6%94%BE%E8%AE%BE%E8%AE%A1/%E8%BF%90%E6%94%BEDC%E4%BB%BF%E7%9C%9F.PNG" alt="运放DC仿真"></p>
+<h3 id="AC仿真结果"><a href="#AC仿真结果" class="headerlink" title="AC仿真结果"></a>AC仿真结果</h3><p><img src="%E8%BF%90%E6%94%BE%E8%AE%BE%E8%AE%A1/%E8%BF%90%E6%94%BEAC%E4%BB%BF%E7%9C%9F.PNG" alt="运放AC仿真"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://bindyhone.github.io/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/" data-id="ck9qshx3x0007zsv597ir1ci2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/01/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0%E7%AE%80%E4%BB%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">运放噪声简介</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6/">硬件</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%99%AA%E5%A3%B0/" rel="tag">噪声</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%B5%E6%BA%90/" rel="tag">电源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E6%94%BE/" rel="tag">运放</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/%E5%99%AA%E5%A3%B0/" style="font-size: 10px;">噪声</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E7%94%B5%E6%BA%90/" style="font-size: 10px;">电源</a> <a href="/tags/%E8%BF%90%E6%94%BE/" style="font-size: 10px;">运放</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/">缓冲（跟随）电路</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/01/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0%E7%AE%80%E4%BB%8B/">运放噪声简介</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/01/%E5%99%AA%E5%A3%B0%E6%B5%8B%E9%87%8F%E6%96%B9%E6%B3%95/">噪声测量方法</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/30/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/">噪声的统计学导论</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/30/%E7%94%B5%E6%BA%90%E6%B5%8B%E8%AF%95%E5%A4%A7%E7%BA%B2/">电源测试大纲</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 bindyhone<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
