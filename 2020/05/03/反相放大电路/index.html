@@ -7,18 +7,26 @@
   
   <title>反相放大电路 | bindyhone&#39;s Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人博客">
+  <meta name="description" content="设计目标      设计概述   输入信号通常来自低阻抗，该电路的输入阻抗由R1决定。     设计笔记  1. 工作在线性区域，共模电压不随输入电压影响。  2. 输入阻抗由输入电阻确定，要确保输入电阻足够大。  3. 使用高阻值会降低电路的相位裕量，并在电路中引入额外的噪声。  4. 避免在输出接电容影响稳定性。  5. 小信号带宽由噪声增益（或同相增益）和运算放大器增益带宽积 （GBP） 决">
 <meta property="og:type" content="article">
 <meta property="og:title" content="反相放大电路">
 <meta property="og:url" content="http://bindyhone.github.io/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/index.html">
 <meta property="og:site_name" content="bindyhone&#39;s Blogs">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="设计目标      设计概述   输入信号通常来自低阻抗，该电路的输入阻抗由R1决定。     设计笔记  1. 工作在线性区域，共模电压不随输入电压影响。  2. 输入阻抗由输入电阻确定，要确保输入电阻足够大。  3. 使用高阻值会降低电路的相位裕量，并在电路中引入额外的噪声。  4. 避免在输出接电容影响稳定性。  5. 小信号带宽由噪声增益（或同相增益）和运算放大器增益带宽积 （GBP） 决">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E7%94%B5%E8%B7%AF%E5%B8%A6%E5%AE%BD.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E5%8E%8B%E6%91%86%E7%8E%87.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E9%9B%B6%E7%82%B9%E9%A2%91%E7%8E%87.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/DC%E4%BB%BF%E7%9C%9F.PNG">
+<meta property="og:image" content="http://bindyhone.github.io/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/AC%E4%BB%BF%E7%9C%9F.PNG">
 <meta property="article:published_time" content="2020-05-03T09:19:33.000Z">
-<meta property="article:modified_time" content="2020-05-03T09:21:05.567Z">
+<meta property="article:modified_time" content="2020-05-07T15:59:12.944Z">
 <meta property="article:author" content="bindyhone">
 <meta property="article:tag" content="电子 java 半导体">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://bindyhone.github.io/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.PNG">
   
     <link rel="alternate" href="/atom.xml" title="bindyhone&#39;s Blogs" type="application/atom+xml">
   
@@ -89,11 +97,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="设计目标"><a href="#设计目标" class="headerlink" title="设计目标"></a>设计目标</h2><p><img src="/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.PNG" alt="设计目标"></p>
+<hr>
+<h2 id="设计概述"><a href="#设计概述" class="headerlink" title="设计概述"></a>设计概述</h2><p><img src="/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF.PNG" alt="反相放大电路"></p>
+<p>输入信号通常来自低阻抗，该电路的输入阻抗由R1决定。</p>
+<hr>
+<h2 id="设计笔记"><a href="#设计笔记" class="headerlink" title="设计笔记"></a>设计笔记</h2><ol>
+<li>工作在线性区域，共模电压不随输入电压影响。</li>
+<li>输入阻抗由输入电阻确定，要确保输入电阻足够大。</li>
+<li>使用高阻值会降低电路的相位裕量，并在电路中引入额外的噪声。</li>
+<li>避免在输出接电容影响稳定性。</li>
+<li>小信号带宽由噪声增益（或同相增益）和运算放大器增益带宽积 （GBP） 决定。附加滤波可以通过与 R2 并电容来实现。如果使用高值电阻器，与 R2 并联添加电容器也会提高电路的稳定性。</li>
+<li>较大的信号性能可能受压摆率（SR）的限制。因此，检查数据手册中的最大输出幅度与频率，以尽量减少变频引起的失真。</li>
+</ol>
+<hr>
+<h2 id="设计步骤"><a href="#设计步骤" class="headerlink" title="设计步骤"></a>设计步骤</h2><p>Vout = -Vin(R2/R1)</p>
+<ol>
+<li>确定 R1 的起始值。R1 与信号源阻抗的相对大小会影响增益误差。假设信号源的阻抗较低（例如，100Ω），则设置 R1=10kΩ 以进行 1% 增益误差。</li>
+<li>计算电路所需的增益。Vout/Vin。</li>
+<li>计算R2=Vout/Vin。</li>
+<li>计算电路带宽，以确保它满足要求。请务必使用电路的噪声增益或同相增益。（增益带宽积）</li>
+</ol>
+<p><img src="/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E7%94%B5%E8%B7%AF%E5%B8%A6%E5%AE%BD.PNG" alt="计算电路带宽"></p>
+<ol start="5">
+<li>计算最小化摆位引起的失真所需的最小摆率。</li>
+</ol>
+<p><img src="/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E5%8E%8B%E6%91%86%E7%8E%87.PNG" alt="计算压摆率"></p>
+<ol start="6">
+<li>为了避免稳定性问题，确保增益设置的电阻和器件的输入电容产生的零点频率大于电路的带宽。</li>
+</ol>
+<p><img src="/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E9%9B%B6%E7%82%B9%E9%A2%91%E7%8E%87.PNG" alt="计算零点频率"></p>
+<ul>
+<li>Ccm和Cdiff分别是共模和差模的输入电容</li>
+</ul>
+<hr>
+<h2 id="DC仿真结果"><a href="#DC仿真结果" class="headerlink" title="DC仿真结果"></a>DC仿真结果</h2><p><img src="/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/DC%E4%BB%BF%E7%9C%9F.PNG" alt="DC仿真结果"></p>
+<h2 id="AC仿真结果"><a href="#AC仿真结果" class="headerlink" title="AC仿真结果"></a>AC仿真结果</h2><p><img src="/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/AC%E4%BB%BF%E7%9C%9F.PNG" alt="DC仿真结果"></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bindyhone.github.io/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/" data-id="ck9r2edy90002nov5hb8ubd62" class="article-share-link">Share</a>
+      <a data-url="http://bindyhone.github.io/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/" data-id="ck9wyhj0w0001xsv5hwtuae6l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -101,6 +145,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2020/05/04/java%E5%9F%BA%E7%A1%80%E9%A2%98%E7%9B%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          java基础题目
+        
+      </div>
+    </a>
   
   
     <a href="/2020/05/03/%E8%BF%90%E6%94%BE%E5%99%AA%E5%A3%B0%E7%AE%80%E4%BB%8B/" id="article-nav-older" class="article-nav-link-wrap">
@@ -163,6 +216,10 @@
       <ul>
         
           <li>
+            <a href="/2020/05/04/java%E5%9F%BA%E7%A1%80%E9%A2%98%E7%9B%AE/">java基础题目</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/03/%E5%8F%8D%E7%9B%B8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/">反相放大电路</a>
           </li>
         
@@ -176,10 +233,6 @@
         
           <li>
             <a href="/2020/05/03/%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AF%BC%E8%AE%BA/">噪声的统计学导论</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/03/%E7%BC%93%E5%86%B2%EF%BC%88%E8%B7%9F%E9%9A%8F%EF%BC%89%E7%94%B5%E8%B7%AF/">缓冲（跟随）电路</a>
           </li>
         
       </ul>
